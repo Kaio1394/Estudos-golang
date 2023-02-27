@@ -7,10 +7,7 @@ import (
 
 // Operadores lógicos
 func compras(trab1, trab2 bool) (bool, bool, bool) {
-	comprarTv50 := trab1 && trab2
-	comprarTv32 := trab1 != trab2
-	comprarSorvete := trab1 || trab2
-	return comprarTv50, comprarTv32, comprarSorvete
+	return trab1 && trab2, trab1 != trab2, trab1 || trab2
 }
 
 func main() {
