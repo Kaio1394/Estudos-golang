@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 // passando map como parâmetro de uma função
 func add(estrutura map[int]string, cpf int, name string) {
@@ -44,5 +46,6 @@ func main() {
 			"Kevyn":                 5000.00,
 		},
 	}
-	fmt.Println(funcPorLetra)
+	fmt.Println(funcPorLetra["K"]["Kaio Cândido Santiago"])
+
 }
