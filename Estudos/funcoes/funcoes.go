@@ -10,6 +10,11 @@ var soma = func(a, b int) int {
 	return a + b
 }
 
+// passando um ponteiro como parâmetro
+func change(item *int) {
+	*item += 2
+}
+
 func multiplicacao(a, b interface{}) interface{} {
 	return reflect.ValueOf(a).Int() * reflect.ValueOf(b).Int()
 }
@@ -50,4 +55,10 @@ func teste(funcao func(interface{}, interface{}) interface{},
 
 func main() {
 	fmt.Println(teste(soma2, 1, 2))
+	x := 5
+	var y *int = &x
+	change(y)
+
+	// fmt.Println(x)
+	fmt.Println(*y)
 }
