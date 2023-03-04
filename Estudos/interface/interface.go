@@ -16,6 +16,10 @@ type produto struct {
 	preco float64
 }
 
+func imprimir(x imprimivel) {
+	fmt.Println(x.toString())
+}
+
 func (p pessoa) toString() string {
 	return p.nome + " " + p.sobrenome
 }
@@ -23,16 +27,12 @@ func (p produto) toString() string {
 	return fmt.Sprintf("%s - R$ %.2f", p.nome, p.preco)
 }
 
-func imprimir(x imprimivel) {
-	fmt.Println(x.toString())
-}
-
 func main() {
-	var coisa = pessoa{"Kaio", "Santiago"}
+	var coisa imprimivel = produto{"TV32", 1563.00}
 	fmt.Println(coisa.toString())
 	imprimir(coisa)
 
-	coisa = produto{"TV32", 1563.00}
+	coisa = pessoa{"Kaio", "Santiago"}
 	fmt.Println(coisa.toString())
 	imprimir(coisa)
 }
