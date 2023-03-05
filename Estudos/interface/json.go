@@ -28,4 +28,5 @@ func main() {
 	json.Unmarshal([]byte(jsonString), &p2)
 
 	fmt.Println(p2.Tags[1])
+	fmt.Println(p2)
 }
