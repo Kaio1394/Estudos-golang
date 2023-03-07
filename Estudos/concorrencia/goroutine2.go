@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-var wg = sync.WaitGroup{}
+var wg sync.WaitGroup
 
 func main() {
 	// informa para o programa a quantidade de goroutines
